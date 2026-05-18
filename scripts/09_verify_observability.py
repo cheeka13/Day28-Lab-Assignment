@@ -1,5 +1,8 @@
 # scripts/09_verify_observability.py
 import requests
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
 def check_prometheus():
     resp = requests.get("http://localhost:9090/api/v1/query",
